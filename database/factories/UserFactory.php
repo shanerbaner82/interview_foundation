@@ -27,3 +27,9 @@ $factory->define(User::class, function (Faker $faker) {
         'token' => null,
     ];
 });
+
+$factory->state(User::class, 'token', function($faker){
+   return [
+       'token' => $faker->word
+   ];
+});
