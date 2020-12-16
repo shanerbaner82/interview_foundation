@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e72c7a3-1cfd-472a-bdeb-a0de9f884a65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Casts/Encryption.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AddTokenController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckForTokenController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DeleteTokenController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/Github/ApiService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/Github/GithubService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pf.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Casts/Encryption.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Casts/Encryption.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +130,28 @@
       <path value="$PROJECT_DIR$/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/github-api" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/clue/stream-filter" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/manager" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/bounded-cache" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/github" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/php-http/client-common" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/vendor/php-http/cache-plugin" />
+      <path value="$PROJECT_DIR$/vendor/php-http/guzzle6-adapter" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/php-http/promise" />
     </include_path>
   </component>
   <component name="ProjectId" id="1lksuitTRNikQCMbcUF8anJuLaz" />
@@ -132,20 +163,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="PHPUnit.EncryptedStorageTest">
-    <configuration name="EncryptedStorageTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="EncryptedStorageTest.aUserCanHaveAToken" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" method="aUserCanHaveAToken" scope="Method" />
-      <method v="2" />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/app/Http/Services/Github" />
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHPUnit.JsonApiTests.an_authorized_user_cane_delete_their_token">
     <configuration name="EncryptedStorageTest.aUsersTokenIsEncryptedInTheDatabase" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -155,20 +185,33 @@
       <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" method="aUsersTokenIsEncryptedInTheDatabase" scope="Method" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
-    <configuration name="EncryptedStorageTest.a_users_token_is_decrypted_when_retrieved_from_the_database" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" method="a_users_token_is_decrypted_when_retrieved_from_the_database" scope="Method" />
+    <configuration name="JsonApiTests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="EncryptedStorageTest.a_users_token_is_encrypted_in_the_database" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" method="a_users_token_is_encrypted_in_the_database" scope="Method" />
+    <configuration name="JsonApiTests.an_authorized_user_cane_delete_their_token" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="an_authorized_user_cane_delete_their_token" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JsonApiTests.an_authorized_user_cannot_delete_a_token" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="an_authorized_user_cannot_delete_a_token" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JsonApiTests.an_authorized_user_receives_null_token_if_one_is_not_set" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="an_authorized_user_receives_null_token_if_one_is_not_set" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JsonApiTests.an_authorized_user_receives_token_if_one_is_set" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="an_authorized_user_receives_token_if_one_is_set" scope="Method" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.EncryptedStorageTest" />
-        <item itemvalue="PHPUnit.EncryptedStorageTest.a_users_token_is_decrypted_when_retrieved_from_the_database" />
-        <item itemvalue="PHPUnit.EncryptedStorageTest.a_users_token_is_encrypted_in_the_database" />
-        <item itemvalue="PHPUnit.EncryptedStorageTest.aUserCanHaveAToken" />
+        <item itemvalue="PHPUnit.JsonApiTests.an_authorized_user_cane_delete_their_token" />
+        <item itemvalue="PHPUnit.JsonApiTests.an_authorized_user_cannot_delete_a_token" />
+        <item itemvalue="PHPUnit.JsonApiTests.an_authorized_user_receives_token_if_one_is_set" />
+        <item itemvalue="PHPUnit.JsonApiTests" />
+        <item itemvalue="PHPUnit.JsonApiTests.an_authorized_user_receives_null_token_if_one_is_not_set" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +223,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608152647754</updated>
-      <workItem from="1608152649425" duration="3646000" />
+      <workItem from="1608152649425" duration="8273000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,7 @@ class Encryption implements CastsAttributes
 
     public function get($model, string $key, $value, array $attributes)
     {
-        return Crypt::decryptString($value);
+        return $value ? Crypt::decryptString($value) : null;
     }
 
     public function set($model, string $key, $value, array $attributes)
