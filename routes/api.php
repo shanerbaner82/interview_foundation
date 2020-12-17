@@ -7,4 +7,5 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('token', 'CheckForTokenController');
     Route::put('token', 'AddTokenController');
     Route::delete('token', 'DeleteTokenController');
+    Route::get('stars', 'StarsController');
 });

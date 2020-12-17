@@ -2,25 +2,22 @@
 
 namespace App\Http\Services\Github;
 
-use GrahamCampbell\GitHub\GitHubManager;
+use GrahamCampbell\GitHub\Facades\GitHub;
 
 class ApiService
 {
-    /** @var GitHubManager */
-    private $manager;
+    public $github;
 
-    public function __construct(GitHubManager $manager)
+    public function __construct()
     {
-        $this->manager = $manager;
+       $this->github = GitHub::getFactory()->make([
+           'method' => 'token',
+           'token' => auth()->user()->token
+       ]);
     }
 
-    public function getStarredRepositories(string $token): array
+    public function getStarredRepositories(): array
     {
-        $client = $this->manager->getFactory()->make([
-            'method'     => 'token',
-            'token'      => $token,
-        ]);
-
-        return $client->me()->starring()->all();
+        return $this->github->me()->starring()->all();
     }
 }
