@@ -11,9 +11,9 @@ class GithubService
         $this->service = $service;
     }
 
-    public function starredRepositories($token): string
+    public function starredRepositories(): string
     {
-        return collect($this->service->getStarredRepositories($token))
+        return collect($this->service->getStarredRepositories())
             ->map(function ($repo) {
                 return [
                     'id' => $repo['id'],

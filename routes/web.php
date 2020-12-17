@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Services\Github\ApiService;
+use App\User;
+use GrahamCampbell\GitHub\Facades\GitHub;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('sdr', function(ApiService $service) {
+   dd($service->getStarredRepositories());
+});
