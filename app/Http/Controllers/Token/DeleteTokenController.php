@@ -12,5 +12,4 @@ class DeleteTokenController extends Controller
             'token' => null
         ]);
     }
-
 }
