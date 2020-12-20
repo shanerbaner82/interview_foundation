@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4e72c7a3-1cfd-472a-bdeb-a0de9f884a65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Token/AddTokenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Token/AddTokenController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/GithubAPITests.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/GithubAPITest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/JsonApiTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clover.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +154,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -219,7 +218,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608152647754</updated>
-      <workItem from="1608152649425" duration="30811000" />
+      <workItem from="1608152649425" duration="32333000" />
     </task>
     <servers />
   </component>
