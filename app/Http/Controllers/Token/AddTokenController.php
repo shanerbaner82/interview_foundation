@@ -12,9 +12,10 @@ class AddTokenController extends Controller
             'token' => 'required|string'
         ]);
 
-       auth()->user()->update([
-           'token' => $items['token']
-       ]);
+        auth()->user()->update([
+            'token' => $items['token']
+        ]);
 
+        return response()->json(['status' => 'success']);
     }
 }

@@ -12,14 +12,14 @@ class ApiService
 
     public function __construct(User $user)
     {
-       $this->github = GitHub::getFactory()->make([
-           'method' => 'token',
-           'token' => $user->token
-       ]);
+        $this->github = GitHub::getFactory()->make([
+            'method' => 'token',
+            'token' => $user->token
+        ]);
     }
 
-    public function getStarredRepositories()
+    public function getStarredRepositories(): array
     {
-        return json_encode($this->github->me()->starring()->all());
+        return $this->github->me()->starring()->all();
     }
 }

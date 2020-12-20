@@ -10,13 +10,13 @@ class LoginController extends Controller
 {
     public function __invoke(): \Illuminate\Http\RedirectResponse
     {
-        if(User::count() === 0){
+        if (User::count() === 0) {
             $user = User::create([
                 'name' => 'Shane Rosenthal',
                 'email' => 'srosenthal82@gmail.com',
                 'password' => Hash::make('password')
             ]);
-        }else{
+        } else {
             $user = User::first();
         }
 

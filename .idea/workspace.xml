@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e72c7a3-1cfd-472a-bdeb-a0de9f884a65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,60 +148,64 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Feature/JsonTests/Tokens" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="run.code.analysis.last.selected.profile" value="pJust PHPCS" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Feature/JsonTests/Tokens" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$/app/Http/Services/Github" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Unit" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Stars" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Token" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.GithubAPITests">
+  <component name="RunManager" selected="PHPUnit.EncryptedStorageTest">
+    <configuration name="EncryptedStorageTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests" file="$PROJECT_DIR$/tests/Unit/TokensAreEncryptedTest.php" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="EncryptedStorageTest.aUsersTokenIsEncryptedInTheDatabase" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP 7.2" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" method="aUsersTokenIsEncryptedInTheDatabase" scope="Method" use_alternative_configuration_file="true" />
+      <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/TokensAreEncryptedTest.php" method="aUsersTokenIsEncryptedInTheDatabase" scope="Method" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
-    <configuration name="GithubAPITests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\GithubAPITests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/GithubAPITests.php" scope="Class" />
+    <configuration name="Feature" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature" />
       <method v="2" />
     </configuration>
-    <configuration name="GithubAPITests.api_service_returns_github_stars" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\GithubAPITests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/GithubAPITests.php" method="api_service_returns_github_stars" scope="Method" />
+    <configuration name="GithubAPITest.an_authorized_user_with_a_token_can_retrieve_their_stars" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\GithubAPITest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/GithubAPITest.php" method="an_authorized_user_with_a_token_can_retrieve_their_stars" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="JsonApiTests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" scope="Class" />
+    <configuration name="JsonApiTest.an_authorized_user_with_a_token_can_retrieve_their_stars" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\JsonApiTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTest.php" method="an_authorized_user_with_a_token_can_retrieve_their_stars" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="JsonApiTests.a_user_can_save_their_github_token_via_api_route" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="a_user_can_save_their_github_token_via_api_route" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="JsonApiTests.an_unauthorized_user_cannot_store_a_github_token" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="an_unauthorized_user_cannot_store_a_github_token" scope="Method" />
+    <configuration name="TokensAreEncryptedTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\TokensAreEncryptedTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/TokensAreEncryptedTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.GithubAPITests" />
-        <item itemvalue="PHPUnit.GithubAPITests.api_service_returns_github_stars" />
-        <item itemvalue="PHPUnit.JsonApiTests.a_user_can_save_their_github_token_via_api_route" />
-        <item itemvalue="PHPUnit.JsonApiTests" />
-        <item itemvalue="PHPUnit.JsonApiTests.an_unauthorized_user_cannot_store_a_github_token" />
+        <item itemvalue="PHPUnit.EncryptedStorageTest" />
+        <item itemvalue="PHPUnit.GithubAPITest.an_authorized_user_with_a_token_can_retrieve_their_stars" />
+        <item itemvalue="PHPUnit.Feature" />
+        <item itemvalue="PHPUnit.TokensAreEncryptedTest" />
+        <item itemvalue="PHPUnit.JsonApiTest.an_authorized_user_with_a_token_can_retrieve_their_stars" />
       </list>
     </recent_temporary>
   </component>
@@ -214,11 +217,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608152647754</updated>
-      <workItem from="1608152649425" duration="26763000" />
+      <workItem from="1608152649425" duration="37154000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

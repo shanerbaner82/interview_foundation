@@ -11,7 +11,7 @@ const actions = {
         commit('setError', '');
         axios.get('api/stars').then(data => {
             commit('setFetching', false);
-            commit('setStars', data.data)
+            commit('setStars', data.data.repos)
         }).catch(error => {
             commit('setFetching', false);
             commit('setError', error.response.data.message);
