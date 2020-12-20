@@ -8,7 +8,6 @@ use App\Http\Services\Github\ApiService;
 
 class StarsController extends Controller
 {
-
     public function __invoke(): string
     {
         try{

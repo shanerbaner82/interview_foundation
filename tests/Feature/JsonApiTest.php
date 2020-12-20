@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\User;
+use GrahamCampbell\GitHub\Facades\GitHub;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -82,7 +83,7 @@ class JsonApiTest extends TestCase
     }
 
     /** @test */
-    public function an_authorized_user_cane_delete_their_token()
+    public function an_authorized_user_can_delete_their_token()
     {
         $token = $this->faker()->word;
 
@@ -94,6 +95,5 @@ class JsonApiTest extends TestCase
 
         $this->assertDatabaseHas('users', ['token' => null]);
     }
-
 
 }
