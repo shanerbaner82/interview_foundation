@@ -1,13 +1,13 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
 use App\Http\Services\Github\ApiService;
 use GrahamCampbell\GitHub\Facades\GitHub;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class GithubAPITests extends TestCase
+class GithubAPITest extends TestCase
 {
 
     use WithFaker;

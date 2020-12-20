@@ -5,10 +5,9 @@ namespace Tests\Feature;
 use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Support\Facades\Crypt;
 use Tests\TestCase;
 
-class JsonApiTests extends TestCase
+class JsonApiTest extends TestCase
 {
     use WithFaker, RefreshDatabase;
 
@@ -22,7 +21,7 @@ class JsonApiTests extends TestCase
     /** @test */
     public function a_user_can_save_their_github_token_via_api_route()
     {
-        Crypt::shouldReceive('encryptString');
+        $this->withoutExceptionHandling();
 
         $user = factory(User::class)->create();
 
@@ -36,9 +35,10 @@ class JsonApiTests extends TestCase
         $this->putJson(route('token.put'), ['token' => $token])
             ->assertSuccessful();
 
-        $this->assertDatabaseHas('users', [
-            'token' => Crypt::encryptString($token)
-        ]);
+        $lookupUser = User::first();
+
+        $this->assertTrue($user->token === $lookupUser->token);
+
     }
 
     /** @test */
@@ -50,9 +50,6 @@ class JsonApiTests extends TestCase
     /** @test */
     public function an_authorized_user_receives_null_token_if_one_is_not_set()
     {
-        Crypt::shouldReceive('encryptString');
-        Crypt::shouldReceive('decryptString');
-
         $user = factory(User::class)->create();
 
         $this->actingAs($user);

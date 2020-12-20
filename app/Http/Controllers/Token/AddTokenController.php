@@ -16,5 +16,7 @@ class AddTokenController extends Controller
            'token' => $items['token']
        ]);
 
+       return response()->json(['status' => 'success']);
+
     }
 }
