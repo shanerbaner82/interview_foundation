@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e72c7a3-1cfd-472a-bdeb-a0de9f884a65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Stars/StarsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stars/StarsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clover.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/JsonApiTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/JsonApiTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/GithubAPITest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/GithubAPITest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +153,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="run.code.analysis.last.selected.profile" value="pJust PHPCS" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -171,7 +170,7 @@
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Token" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.JsonApiTest.an_authorized_user_with_a_token_can_retrieve_their_stars">
+  <component name="RunManager" selected="PHPUnit.GithubAPITest.an_authorized_user_with_a_token_can_retrieve_their_stars">
     <configuration name="EncryptedStorageTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests" file="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" use_alternative_configuration_file="true" />
       <method v="2" />
@@ -183,6 +182,10 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" method="aUsersTokenIsEncryptedInTheDatabase" scope="Method" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GithubAPITest.an_authorized_user_with_a_token_can_retrieve_their_stars" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\GithubAPITest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/GithubAPITest.php" method="an_authorized_user_with_a_token_can_retrieve_their_stars" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="GithubAPITests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -197,17 +200,13 @@
       <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.GithubAPITest.an_authorized_user_with_a_token_can_retrieve_their_stars" />
         <item itemvalue="PHPUnit.JsonApiTest.an_authorized_user_with_a_token_can_retrieve_their_stars" />
         <item itemvalue="PHPUnit.EncryptedStorageTest" />
         <item itemvalue="PHPUnit.JsonApiTests" />
         <item itemvalue="PHPUnit.GithubAPITests" />
-        <item itemvalue="PHPUnit.tests" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +218,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608152647754</updated>
-      <workItem from="1608152649425" duration="33013000" />
+      <workItem from="1608152649425" duration="34137000" />
     </task>
     <servers />
   </component>
