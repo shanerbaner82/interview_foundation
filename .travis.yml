@@ -14,9 +14,11 @@ cache:
 before_script:
   - cp .env.travis .env
   - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
-  - composer install
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+  - php artisan key:generate
   - php artisan migrate
 
 
 script:
-  - phpunit
+  - vendor/bin/phpunit
