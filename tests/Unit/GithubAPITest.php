@@ -32,10 +32,10 @@ class GithubAPITest extends TestCase
         $service = \Mockery::mock(ApiService::class);
 
         GitHub::shouldReceive('getFactory->make->me->starring->all')
-                ->andReturn($this->testData);
+            ->andReturn($this->testData);
 
         $service->shouldReceive('getStarredRepositories')
-                ->andReturn($this->testData);
+            ->andReturn($this->testData);
 
         $this->assertTrue($service->getStarredRepositories() === $this->testData);
     }
@@ -52,7 +52,8 @@ class GithubAPITest extends TestCase
 
         $this->actingAs($user);
 
-        $this->getJson(route('stars.get'))->assertSuccessful();
+        $r = $this->getJson(route('stars.get'))->assertSuccessful();
 
+        $this->assertTrue($r->getContent() === json_encode(['repos' => $this->testData]));
     }
 }

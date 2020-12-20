@@ -18,8 +18,8 @@ class ApiService
         ]);
     }
 
-    public function getStarredRepositories()
+    public function getStarredRepositories(): array
     {
-        return json_encode($this->github->me()->starring()->all());
+        return $this->github->me()->starring()->all();
     }
 }
