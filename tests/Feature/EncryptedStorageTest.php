@@ -7,7 +7,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Crypt;
 use Tests\TestCase;
-use Mockery;
 
 class EncryptedStorageTest extends TestCase
 {
@@ -32,8 +31,8 @@ class EncryptedStorageTest extends TestCase
     {
         $token = $this->faker()->word;
 
-        Crypt::shouldReceive('encryptString')->once();
-        Crypt::shouldReceive('decryptString')->twice();
+        Crypt::shouldReceive('encryptString');
+        Crypt::shouldReceive('decryptString');
 
         $user = factory(User::class)->create(['token' => $token]);
 

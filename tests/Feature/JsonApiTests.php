@@ -16,7 +16,7 @@ class JsonApiTests extends TestCase
     public function an_unauthorized_user_cannot_store_a_github_token()
     {
         $token = $this->faker()->word;
-        $this->putJson('/api/token', ['token' => $token])->assertUnauthorized();
+        $this->putJson(route('token.put'), ['token' => $token])->assertUnauthorized();
     }
 
     /** @test */
@@ -33,7 +33,7 @@ class JsonApiTests extends TestCase
         $token = $this->faker()->word;
         $this->actingAs($user);
 
-        $this->putJson('/api/token', ['token' => $token])
+        $this->putJson(route('token.put'), ['token' => $token])
             ->assertSuccessful();
 
         $this->assertDatabaseHas('users', [
@@ -44,7 +44,7 @@ class JsonApiTests extends TestCase
     /** @test */
     public function an_unauthorized_user_cannot_retrieve_a_github_token()
     {
-        $this->getJson('/api/token')->assertUnauthorized();
+        $this->getJson(route('token.get'))->assertUnauthorized();
     }
 
     /** @test */
@@ -57,7 +57,7 @@ class JsonApiTests extends TestCase
 
         $this->actingAs($user);
 
-        $this->getJson('/api/token')->assertJson([
+        $this->getJson(route('token.get'))->assertJson([
             'token' => null
         ]);
 
@@ -72,7 +72,7 @@ class JsonApiTests extends TestCase
 
         $this->actingAs($user);
 
-        $this->getJson('/api/token')
+        $this->getJson(route('token.get'))
             ->assertJson([
                 'token' => $token
             ]);
@@ -81,7 +81,7 @@ class JsonApiTests extends TestCase
     /** @test */
     public function an_authorized_user_cannot_delete_a_token()
     {
-        $this->deleteJson('/api/token')->assertUnauthorized();
+        $this->deleteJson(route('token.delete'))->assertUnauthorized();
     }
 
     /** @test */
@@ -93,7 +93,7 @@ class JsonApiTests extends TestCase
 
         $this->actingAs($user);
 
-        $this->deleteJson('/api/token')->assertSuccessful();
+        $this->deleteJson(route('token.delete'))->assertSuccessful();
 
         $this->assertDatabaseHas('users', ['token' => null]);
     }
