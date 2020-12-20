@@ -5,13 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e72c7a3-1cfd-472a-bdeb-a0de9f884a65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/StarsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/GitHubStars.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/GithubTokenForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/stars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/store/modules/token.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Datasets/StarredRepos.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AddTokenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Token/AddTokenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckForTokenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Token/CheckForTokenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeleteTokenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Token/DeleteTokenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StarsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Stars/StarsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Services/Github/ApiService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/Github/ApiService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/Github/GithubService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/Github/GithubService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/Github/GithubService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/GithubAPITests.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/GithubAPITests.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,11 +182,16 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$/app/Http/Services/Github" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Stars" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Token" />
+    </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.GithubAPITests.a_user_can_save_their_github_token_via_api_route">
+  <component name="RunManager" selected="PHPUnit.GithubAPITests.api_service_returns_github_stars">
     <configuration name="EncryptedStorageTest.aUsersTokenIsEncryptedInTheDatabase" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -176,33 +201,33 @@
       <TestRunner class="Tests\Feature\EncryptedStorageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/EncryptedStorageTest.php" method="aUsersTokenIsEncryptedInTheDatabase" scope="Method" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
-    <configuration name="GithubAPITests.a_user_can_save_their_github_token_via_api_route" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\GithubAPITests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/GithubAPITests.php" method="a_user_can_save_their_github_token_via_api_route" scope="Method" />
+    <configuration name="Feature" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GithubAPITests.api_service_returns_github_stars" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\GithubAPITests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/GithubAPITests.php" method="api_service_returns_github_stars" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="JsonApiTests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="JsonApiTests.an_authorized_user_cane_delete_their_token" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="an_authorized_user_cane_delete_their_token" scope="Method" />
+    <configuration name="JsonApiTests.a_user_can_save_their_github_token_via_api_route" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="a_user_can_save_their_github_token_via_api_route" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="JsonApiTests.an_authorized_user_cannot_delete_a_token" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="an_authorized_user_cannot_delete_a_token" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="JsonApiTests.an_authorized_user_receives_token_if_one_is_set" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="an_authorized_user_receives_token_if_one_is_set" scope="Method" />
+    <configuration name="JsonApiTests.an_unauthorized_user_cannot_store_a_github_token" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\JsonApiTests" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/JsonApiTests.php" method="an_unauthorized_user_cannot_store_a_github_token" scope="Method" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.GithubAPITests.a_user_can_save_their_github_token_via_api_route" />
-        <item itemvalue="PHPUnit.JsonApiTests.an_authorized_user_cane_delete_their_token" />
-        <item itemvalue="PHPUnit.JsonApiTests.an_authorized_user_cannot_delete_a_token" />
-        <item itemvalue="PHPUnit.JsonApiTests.an_authorized_user_receives_token_if_one_is_set" />
+        <item itemvalue="PHPUnit.GithubAPITests.api_service_returns_github_stars" />
+        <item itemvalue="PHPUnit.JsonApiTests.a_user_can_save_their_github_token_via_api_route" />
         <item itemvalue="PHPUnit.JsonApiTests" />
+        <item itemvalue="PHPUnit.JsonApiTests.an_unauthorized_user_cannot_store_a_github_token" />
+        <item itemvalue="PHPUnit.Feature" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +239,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608152647754</updated>
-      <workItem from="1608152649425" duration="15464000" />
+      <workItem from="1608152649425" duration="25867000" />
     </task>
     <servers />
   </component>

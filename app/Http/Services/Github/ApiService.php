@@ -2,22 +2,24 @@
 
 namespace App\Http\Services\Github;
 
+use App\User;
+use Github\Exception\RuntimeException;
 use GrahamCampbell\GitHub\Facades\GitHub;
 
 class ApiService
 {
     public $github;
 
-    public function __construct()
+    public function __construct(User $user)
     {
        $this->github = GitHub::getFactory()->make([
            'method' => 'token',
-           'token' => auth()->user()->token
+           'token' => $user->token
        ]);
     }
 
-    public function getStarredRepositories(): array
+    public function getStarredRepositories()
     {
-        return $this->github->me()->starring()->all();
+        return json_encode($this->github->me()->starring()->all());
     }
 }

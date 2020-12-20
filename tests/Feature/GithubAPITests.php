@@ -2,32 +2,40 @@
 
 namespace Tests\Feature;
 
-use App\User;
-use App\Http\Services\Github\GithubService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Http\Services\Github\ApiService;
+use GrahamCampbell\GitHub\Facades\GitHub;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class GithubAPITests extends TestCase
 {
 
-    use WithFaker, RefreshDatabase;
+    use WithFaker;
+
+    /**
+     * @var string
+     */
+    private $testData;
+
+    public function setUp(): void
+    {
+        parent::setUp();
+        $data = file_get_contents('tests/Datasets/StarredRepos.json');
+        $data = utf8_encode($data);
+        $this->testData = json_decode($data);
+    }
 
     /** @test */
-    public function a_user_can_save_their_github_token_via_api_route()
+    public function api_service_returns_github_stars()
     {
-        GithubService::shouldReceive('getStarredRepositories')->andReturn([
-            'hello' => 'hi'
-        ]);
+        $service = \Mockery::mock(ApiService::class);
 
-        $token = $this->faker()->word;
-        $user = factory(User::class)->create(['token' => $token]);
+        GitHub::shouldReceive('getFactory->make->me->starring->all')
+                ->andReturn($this->testData);
 
-        $this->actingAs($user);
+        $service->shouldReceive('getStarredRepositories')
+                ->andReturn($this->testData);
 
-        $this->getJson('/api/stars')->assertJson([
-            'hello' => 'hi'
-        ]);
-
+        $this->assertTrue($service->getStarredRepositories() === $this->testData);
     }
 }
